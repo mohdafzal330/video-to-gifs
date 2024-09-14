@@ -1,0 +1,24 @@
+/* Optional additional styles for the Subscription component */
+
+.container {
+    max-width: 600px;
+  }
+  
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
