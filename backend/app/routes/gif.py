@@ -25,14 +25,14 @@ router = APIRouter(
 
 UPLOAD_DIR = "./uploads"
 GIF_DIR = "./gifs"
-
+URL = "https://video-to-gifs.onrender.com"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(GIF_DIR, exist_ok=True)
 
 @router.get("/")
 def get_gifs(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
     gifs = db.query(GIF).offset(skip).limit(limit).all()
-    base_url = "http://localhost:8000/gifs/"  # Ensure this matches your static files URL
+    base_url = URL+"/gifs/"  # Ensure this matches your static files URL
     return [{"gif_url": base_url + os.path.basename(gif.file_path)} for gif in gifs]
 
 
@@ -153,9 +153,9 @@ def upload_gif_to_tenor(gif_file: str):
         # Wait for the upload page to load
         time.sleep(2)
 
-        base_url = "http://localhost:8000/gifs/"
+        base_url = URL+"/gifs/"
         gifd = base_url + os.path.basename(gif_file)
-        gif_file_path = gifd.replace('http://localhost:8000', os.getcwd())  
+        gif_file_path = gifd.replace(URL, os.getcwd())  
 
         # Locate the file input element and upload the GIF
         file_input = driver.find_element(By.ID, 'upload_file_dropzone-upload-file-section-button')
@@ -237,9 +237,9 @@ def upload_gif_to_tenor2(gif_file: str):
         file_input = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.ID, 'upload_file_dropzone-upload-file-section-button'))
         )
-        base_url = "http://localhost:8000/gifs/"
+        base_url = URL+"/gifs/"
         gifd = base_url + os.path.basename(gif_file)
-        gif_file_path = gifd.replace('http://localhost:8000', os.getcwd())
+        gif_file_path = gifd.replace(URL, os.getcwd())
         file_input.send_keys(gif_file_path)
 
         # Wait for the tag input box to be present, then input tags

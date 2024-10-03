@@ -31,7 +31,7 @@ function Hero() {
     formData.append('file', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/gifs/create', formData, {
+      const response = await axios.post('https://video-to-gifs.onrender.com/api/gifs/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
