@@ -58,7 +58,7 @@ async def create_gif(file: UploadFile = File(...), db: Session = Depends(get_db)
         gif_paths.append(gif_file)
 
         # Upload the created GIF to Tenor
-        upload_gif_to_tenor2(gif_file)
+        # upload_gif_to_tenor2(gif_file)
 
         # upload_gif_to_tenor_v2(gif_file)
 
