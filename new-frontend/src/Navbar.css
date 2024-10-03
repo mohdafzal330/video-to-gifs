@@ -1,0 +1,125 @@
+/* Ensure box-sizing includes padding and borders */
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background color */
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 1000;
+  overflow-x: hidden; /* Prevent overflow */
+}
+
+/* Ensure no overflow on mobile */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #ff5733; /* Color change on hover */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Larger gap for a clean, spacious look */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Ensure correct layout */
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links a,
+.navbar-links button {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.navbar-links a:hover,
+.navbar-links button:hover {
+  background-color: #42dce7; /* Bright background on hover */
+  /* color: white; */
+  transform: translateY(-3px); /* Hover lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover shadow for depth */
+}
+
+.signup-btn {
+  background-color: #42dce7; /* Green for the Sign Up button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #42dce7; /* Green for the Sign Up button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale animation on hover */
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navbar sticky shadow effect when scrolling */
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff; /* Slightly different color on scroll */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .navbar-links a,
+  .navbar-links button {
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+}

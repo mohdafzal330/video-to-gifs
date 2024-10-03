@@ -1,0 +1,27 @@
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+}
+
+.close-btn {
+  background-color: #e14a1a;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background-color: #d14015;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666;
+}

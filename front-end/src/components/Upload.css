@@ -1,0 +1,22 @@
+/* Optional additional styles for the Upload component */
+
+.container {
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  input[type="file"] {
+    display: inline-block;
+  }
+  
+  .btn {
+    padding: 0.5rem 2rem;
+  }
+  
+  .alert {
+    font-size: 1rem;
+  }
+  

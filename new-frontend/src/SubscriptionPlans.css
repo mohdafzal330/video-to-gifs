@@ -1,0 +1,68 @@
+.subscription-plans {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.subscription-plans h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plan {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.plan p {
+  margin: 10px 0;
+  color: white;
+}
+
+.plan-btn {
+  background-color: #ff8c42; /* Soft orange */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: #ff7633; /* Darker orange on hover */
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

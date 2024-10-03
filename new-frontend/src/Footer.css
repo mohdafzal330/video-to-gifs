@@ -1,0 +1,98 @@
+.footer {
+  background: linear-gradient(
+    135deg,
+    #2c3e50,
+    #34495e
+  ); /* Gradient background */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating effect for decorative circles */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  animation: floating 10s ease-in-out infinite;
+}
+
+.footer::before {
+  top: -200px;
+  left: -200px;
+}
+
+.footer::after {
+  bottom: -200px;
+  right: -200px;
+}
+
+/* Links styling */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-links li {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Link animation */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff8c42; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Social media icons */
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Footer text */
+.footer p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+/* Floating animation */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

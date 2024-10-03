@@ -1,0 +1,28 @@
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  .card-img-top {
+    height: 280px;
+    object-fit: cover;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  .text-center {
+    font-weight: bold;
+  }
+  
+  p.text-center {
+    font-size: 1.2rem;
+  }
+  
